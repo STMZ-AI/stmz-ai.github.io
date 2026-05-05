@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | STMZ AI</title>
+    <meta name="description" content="Learn how to use STMZ AI for high-quality stem separation and Rekordbox integration.">
+    <link rel="icon" type="image/svg+xml" href="public/icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .docs-page {
+            padding: 140px 0 100px;
+        }
+        .docs-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .docs-content h1 {
+            font-size: 48px;
+            margin-bottom: 32px;
+            background: linear-gradient(135deg, #fff, var(--color-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .docs-section {
+            margin-bottom: 60px;
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            padding: 40px;
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+        }
+        .docs-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--color-accent);
+        }
+        .docs-section p {
+            margin-bottom: 16px;
+            color: var(--color-text-secondary);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        .docs-section ul, .docs-section ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--color-text-secondary);
+        }
+        .docs-section li {
+            margin-bottom: 12px;
+        }
+        .code-block {
+            background: #000;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #34d399;
+            margin: 12px 0;
+            border-left: 3px solid var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+    
+    <nav class="navbar visible"> <!-- Always visible on docs page -->
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="public/icon.svg" alt="STMZ AI Logo">
+                <span class="logo-text">STMZ AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="reveal-text" style="color: #fff; opacity: 0.8;">Home</a>
+                <a href="#how-it-works" class="reveal-text" style="color: #fff; opacity: 0.8;">How it Works</a>
+                <a href="index.html#download" class="btn btn-primary reveal-text delay-1">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="docs-page">
+        <div class="container">
+            <div class="docs-content">
+                <h1 class="reveal-text">Documentation</h1>
+                
+                <section id="how-it-works" class="docs-section reveal-text">
+                    <h2>How it Works</h2>
+                    <p>STMZ AI uses advanced deep learning models to analyze your audio files and separate them into individual "stems". Unlike traditional filters, our AI identifies specific instruments and vocals, allowing for clean isolation with minimal artifacts.</p>
+                    <p>Supported stems include:</p>
+                    <ul>
+                        <li><strong>Acapella:</strong> Pure vocal isolation.</li>
+                        <li><strong>Instrumental:</strong> The full track without vocals.</li>
+                        <li><strong>Drums:</strong> Percussive elements.</li>
+                        <li><strong>Bass:</strong> Low-frequency musical elements.</li>
+                        <li><strong>Melody:</strong> Synths, guitars, and other melodic instruments.</li>
+                    </ul>
+                </section>
+
+                <section id="rekordbox-import" class="docs-section reveal-text">
+                    <h2>Importing from Rekordbox</h2>
+                    <p>To process your Rekordbox library, you first need to export your collection or a specific playlist as an XML file from Rekordbox.</p>
+                    <ol>
+                        <li>In Rekordbox, go to <strong>File > Export Collection in XML format</strong>.</li>
+                        <li>Open STMZ AI and click the <strong>Rekordbox Tab</strong>.</li>
+                        <li>Select your exported XML file. STMZ AI will now display your entire library with all metadata and analysis intact.</li>
+                        <li>Select the tracks you wish to split and click <strong>Process</strong>.</li>
+                    </ol>
+                </section>
+
+                <section id="rekordbox-export" class="docs-section reveal-text">
+                    <h2>Exporting to Rekordbox</h2>
+                    <p>Once processing is complete, STMZ AI generates high-quality stems and creates a new Rekordbox-compatible XML file.</p>
+                    <ol>
+                        <li>In STMZ AI settings, ensure your <strong>Output Path</strong> is set correctly.</li>
+                        <li>After processing, click the <strong>Export XML</strong> button.</li>
+                        <li>In Rekordbox, go to <strong>Preferences > View > Layout</strong> and ensure "rekordbox xml" is checked under the Layout section.</li>
+                        <li>In the Rekordbox browser, go to the <strong>rekordbox xml</strong> section, right-click, and select <strong>Refresh</strong>.</li>
+                        <li>Your new stems will appear in a dedicated playlist, ready to be dragged into your main collection.</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/STMZ logo.png" alt="STMZ AI">
+                    <span>STMZ AI</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="https://github.com/STMZ-AI/STMZ-App">GitHub</a>
+                    <a href="#">Community</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with passion for DJs. Open source and community driven.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to('.reveal-text', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: 'power4.out',
+                startAt: { y: 30 }
+            });
+        });
+    </script>
+</body>
+</html>
