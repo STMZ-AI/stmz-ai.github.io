@@ -1,0 +1,4 @@
+## 🛠 Built With
+* [UVR5](https://github.com/Anjok07/ultimatevocalremovergui) - Core separation engine
+* [Gemini 1.5 Pro](https://deepmind.google/technologies/gemini/) - Architecture consulting and UI logic
+* [Claude 3.5 Sonnet](https://www.anthropic.com/claude) - XML integration and testing
